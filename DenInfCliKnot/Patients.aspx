@@ -1,4 +1,4 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Patient.aspx.cs" Inherits="DenInfCliKnot.About" %>
+﻿<%@ Page Title="Пациенты" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Patients.aspx.cs" Inherits="DenInfCliKnot.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
@@ -7,6 +7,7 @@
             <dib class="col">
                 <h1 class="text-danger">Управление пациентами</h1>
         </div>
+        <br />  
     </div>
     <div class="row">
 
@@ -14,25 +15,29 @@
             <div>
                 <h2 class="text-danger">Cведения о пациенте</h2>
             </div>
+            <br /> 
             <div>
                 <form>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">ФИО пациента</label>
                         <input type="text" class="form-control" id="exampleInputEmail1">
                     </div>
+                    <br /> 
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Номер телефона</label>
                         <input type="text" class="form-control" id="exampleInputEmail1">
                     </div>
+                    <br /> 
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Адрес</label>
                         <input type="text" class="form-control" id="exampleInputEmail1">
                     </div>
+                    <br /> 
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Дата рождения</label>
                         <input type="date" class="form-control" id="exampleInputEmail1">
                     </div>
-
+                    <br /> 
                     <div class="dropdown">
                         <label for="exampleInputEmail1" class="form-label">Пол</label>
                         <form action="formdata" method="post" name="form1">
@@ -47,11 +52,12 @@
                         </form>
 
                     </div>
-
+                    <br /> 
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Аллергические заболевания</label>
                         <input type="text" class="form-control" id="exampleInputEmail1">
                     </div>
+                    <br /> <br /> 
                     <button type="submit" class="btn btn-danger">Изменить</button>
                     <button type="submit" class="btn btn-danger">Сохранить</button>
                     <button type="submit" class="btn btn-danger">Удалить</button>

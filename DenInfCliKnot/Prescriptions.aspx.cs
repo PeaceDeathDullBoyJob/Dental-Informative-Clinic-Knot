@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace DenInfCliKnot
 {
-    public partial class Contact : Page
+    public partial class Prescriptions : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
