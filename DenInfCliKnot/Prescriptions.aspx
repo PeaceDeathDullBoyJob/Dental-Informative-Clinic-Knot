@@ -15,29 +15,34 @@
             <div>
                 <h2 class="text-danger">Детали рецепиа</h2>
             </div>
+            <br />
             <div>
                 <form>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Пациент</label>
                         <input type="text" class="form-control" id="exampleInputEmail1">
                     </div>
+                    <br />
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Процедура</label>
                         <input type="text" class="form-control" id="exampleInputEmail1">
                     </div>
+                    <br />
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Цена процедуры</label>
                         <input type="text" class="form-control" id="exampleInputEmail1">
                     </div>
+                    <br />
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Препараты</label>
                         <input type="text" class="form-control" id="exampleInputEmail1">
                     </div>
-
+                    <br />
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Частота приёма</label>
                         <input type="text" class="form-control" id="exampleInputEmail1">
                     </div>
+                    <br /><br />
                     <button type="submit" class="btn btn-danger">Изменить</button>
                     <button type="submit" class="btn btn-danger">Сохранить</button>
                     <button type="submit" class="btn btn-danger">Удалить</button>
