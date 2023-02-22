@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Libraries",
+    "\\Libraries\\js"
   ],
-  "SelectedNode": "\\Patient.html",
+  "SelectedNode": "\\Libraries",
   "PreviewInSolutionExplorer": false
 }
