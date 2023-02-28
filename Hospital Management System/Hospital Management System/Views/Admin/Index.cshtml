@@ -1,0 +1,57 @@
+﻿@model Hospital_Management_System.CollectionViewModels.CollectionOfAll
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">
+                <em class="fa fa-home"></em>
+            </a>
+        </li>
+        <li class="active">Dashboard</li>
+    </ol>
+</div><!--/.row-->
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Статистика</h1>
+    </div>
+</div><!--/.row-->
+<p class="text-success">@ViewBag.Messege</p>
+<div class="panel panel-container">
+     
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-blue panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="fa fa-xl fa-user-md color-orange"></em>
+                    <div class="large count">@Model.Doctors.Count()</div>
+                    <div class="text-muted">Доктора</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-orange panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="fa fa-xl fa-user color-teal"></em>
+                    <div class="large">@Model.Patients.Count()</div>
+                    <div class="text-muted">Пациенты</div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+    <div class="row">
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-blue panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="fa fa-xl fa-medkit color-orange"></em>
+                    <div class="large count">@Model.Medicines.Count()</div>
+                    <div class="text-muted">Медикаменты</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

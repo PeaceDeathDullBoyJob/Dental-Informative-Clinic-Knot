@@ -1,0 +1,88 @@
+﻿@using Hospital_Management_System.Models
+@model Hospital_Management_System.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Регистрация";
+}
+<section class="section-form" id="contact">
+    <div class="row">
+        <h2>@ViewBag.Title.</h2>
+    </div>
+    @using (Html.BeginForm("Register", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col span-1-of-4">
+
+            </div>
+            <div class="col span-2-of-4">
+                <div class="plan-box">
+                    <div>
+                        @Html.ValidationSummary("", new { @class = "text-danger" })
+                        <div>
+                            <label for="name">Логин<span style="color: red; font-weight: bold"></span></label>
+                            @Html.TextBoxFor(m => m.UserName, new {@placeholder = " ", id = "name"})
+                            @*@Html.ValidationMessageFor(m => m.UserName, "", new {@class = "text-danger"})*@
+                        </div>
+                        <div>
+                            <label for="fname">Имя<span style="color: red; font-weight: bold"></span></label>
+                            @Html.TextBoxFor(m => m.FirstName, new {@placeholder = " ", id = "fname"})
+                            @*@Html.ValidationMessageFor(m => m.FirstName, "", new {@class = "text-danger"})*@
+                        </div>
+                        <div>
+                            <label for="lname">Фамилия<span style="color: red; font-weight: bold"></span></label>
+                            @Html.TextBoxFor(m => m.LastName, new {@placeholder = " ", id = "lname"})
+                            @*@Html.ValidationMessageFor(m => m.LastName, "", new {@class = "text-danger"})*@
+                        </div>
+                        <div>
+                            <label for="email">E-mail<span style="color: red; font-weight: bold"></span></label>
+                            @Html.TextBoxFor(m => m.Email, new {@placeholder = " ", id = "email"})
+                            @*@Html.ValidationMessageFor(m => m.Email, "", new {@class = "text-danger"})*@
+                        </div>
+                        @*@{
+                            var list = new List<RegisterViewModel>
+                            {
+                                new RegisterViewModel {UserRole = "Patient"},
+                                new RegisterViewModel {UserRole = "Doctor"},
+                                new RegisterViewModel {UserRole = "Admin"}
+                            };
+                        }
+                        <div>
+                            <label for="role">User Role</label>
+                            @Html.DropDownListFor(m => m.UserRole, new SelectList(list, "UserRole", "UserRole"), "--Select Role--", new {@id = "role"})
+                            @Html.ValidationMessageFor(m => m.UserRole, "", new {@class = "text-danger"})
+                        </div>*@
+                        <div>
+                            <label for="password">Пароль<span style="color: red; font-weight: bold"></span></label>
+                            @Html.PasswordFor(m => m.Password, new {@placeholder = " ", id = "password"})
+                            @*@Html.ValidationMessageFor(m => m.Password, "", new {@class = "text-danger"})*@
+                        </div>
+
+                        <div>
+                            <label for="cpassword">Повторите пароль<span style="color: red; font-weight: bold"></span></label>
+                            @Html.PasswordFor(m => m.ConfirmPassword, new {@placeholder = " ", id = "cpassword"})
+                            @*@Html.ValidationMessageFor(m => m.ConfirmPassword, "", new {@class = "text-danger"})*@
+                        </div>
+                        <br/>
+                        <p>
+                            @Html.ActionLink("Уже есть аккаунт?", "Login")
+                        </p>
+                    </div>
+                    <div style="text-align: center !important">
+                        <input type="submit" value="Регистрация" class="btn btn-ghost">
+                    </div>
+                </div>
+            </div>
+            <div class="col span-1-of-4">
+
+            </div>
+        </div>
+        <div style="text-align: center" class="row">
+            @Html.ActionLink("Вернуться назад", "Index", "Home")
+        </div>
+   }
+
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
