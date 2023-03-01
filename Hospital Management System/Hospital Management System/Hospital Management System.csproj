@@ -588,6 +588,7 @@
     <Content Include="Models\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Models\DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
