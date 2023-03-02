@@ -71,8 +71,10 @@ namespace Hospital_Management_System.Controllers
             var Doctor = db.Doctors.Single(c => c.ApplicationUserId == user);
             var schedule = db.Schedules.Single(c => c.DoctorId == Doctor.Id);
             var patientuser = db.Users.Single(c => c.Id == patient.ApplicationUserId);
+            var Medicines = db.Medicines.ToList(),
             var prescription = new Prescription
             {
+                CheckOutTotal = 0;
                 PatientId = model.Prescription.PatientId,
                 DoctorId = Doctor.Id,
                 DoctorName = Doctor.FullName,
@@ -91,6 +93,17 @@ namespace Hospital_Management_System.Controllers
                 Medicine5 = model.Prescription.Medicine5,
                 Medicine6 = model.Prescription.Medicine6,
                 Medicine7 = model.Prescription.Medicine7,
+                string[] mediciness = { Medicine1,Medicine2,Medicine3,Medicine4,Medicine5,Medicine6,Medicine7}
+                for (int i = 1; i<8; i++)
+                {
+                    foreach(Medicine c in Medicines)
+                    {
+                        if (c.name = mediciness[i])
+                        {
+                            CheckOutTotal += c.price;
+                        }
+                    }
+                }
                 Morning1 = model.Prescription.Morning1,
                 Morning2 = model.Prescription.Morning2,
                 Morning3 = model.Prescription.Morning3,
@@ -114,6 +127,7 @@ namespace Hospital_Management_System.Controllers
                 Evening7 = model.Prescription.Evening7,
                 CheckUpAfterDays = model.Prescription.CheckUpAfterDays,
                 PrescriptionAddDate = DateTime.Now.Date,
+                
                 DoctorTiming = "From " + schedule.AvailableStartTime.ToShortTimeString() + " to " + schedule.AvailableEndTime.ToShortTimeString()
             };
 
