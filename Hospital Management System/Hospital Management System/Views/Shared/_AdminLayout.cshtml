@@ -18,20 +18,6 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><span>Личный кабинет</span></a>
-                <ul class="nav navbar-top-links navbar-right"></ul>
-            </div>
-        </div><!-- /.container-fluid -->
-    </nav>
     <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
         <div class="profile-sidebar">
             <div class="profile-userpic">
@@ -83,10 +69,10 @@
                 </div>
             </li>
             <li>
-                <button class="collapsible"><em class="fa fa-medkit">&nbsp; &nbsp;</em>Медикаменты</button>
+                <button class="collapsible"><em class="fa fa-medkit">&nbsp; &nbsp;</em>Услуги</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Добавить медикаментов", "AddMedicine", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
-                    @Html.ActionLink("Список лекарств", "ListOfMedicine", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("Добавить услуги", "AddMedicine", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("Список услуг", "ListOfMedicine", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
                 </div>
             </li>
              
