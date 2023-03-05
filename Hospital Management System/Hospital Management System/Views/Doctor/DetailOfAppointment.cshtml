@@ -75,10 +75,10 @@
     @Html.ActionLink("Edit", "EditAppointment", new { id = Model.Id }) |
     @if (Model.Status)
     {
-        @Html.ActionLink("Назад", "ActiveAppointments")
+        @Html.ActionLink("Back to List", "ActiveAppointments")
     }
     else
     {
-        @Html.ActionLink("Назад", "PendingAppointments")
+        @Html.ActionLink("Back to List", "PendingAppointments")
     }
 </p>
