@@ -73,6 +73,7 @@ namespace Hospital_Management_System.Models
         public int CheckUpAfterDays { get; set; }
 
         public DateTime PrescriptionAddDate { get; set; }
+        public float CheckOutTotal { get; set; }
 
         public string DoctorTiming { get; set; }
 
