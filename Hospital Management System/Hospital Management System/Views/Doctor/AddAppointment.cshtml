@@ -12,12 +12,12 @@
                 <em class="fa fa-home"></em>
             </a>
         </li>
-        <li class="active">Обращение</li>
-        <li class="active">Добавить обращение</li>
+        <li class="active">Appointment</li>
+        <li class="active">Add Appointment</li>
     </ol>
 </div>
 
-<h2>Добавить обращение</h2>
+<h2>Add Appointment</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -73,11 +73,11 @@
 <div>
     @if (Model.Appointment.Status)
     {
-        @Html.ActionLink("Назад", "ActiveAppointments")
+        @Html.ActionLink("Back to List", "ActiveAppointments")
     }
     else
     {
-        @Html.ActionLink("Назад", "Index")
+        @Html.ActionLink("Back to List", "Index")
     }
 </div>
 

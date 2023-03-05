@@ -19,11 +19,11 @@
             <input type="submit" value="Delete" class="btn btn-danger" /> |
             @if (Model.Status)
             {
-                @Html.ActionLink("Назад", "ListOfAppointments")
+                @Html.ActionLink("Back to List", "ListOfAppointments")
             }
             else
             {
-                @Html.ActionLink("Назад", "PendingAppointments")
+                @Html.ActionLink("Back to List", "PendingAppointments")
             }
         </div>
     }
